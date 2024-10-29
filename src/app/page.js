@@ -1,12 +1,40 @@
 import Image from "next/image";
 // import Link from "next/link";
 import img1 from "@/app/bg.webp";
+import Link from "next/link";
+// import { metadata } from "./layout";
+
+export const metadata = {
+  title: "Home - GM Abdou",
+  description: "Protfio  - GM Abdou",
+};
+
 export default function Home() {
   return (
     <div>
+      <div className="flex items-center justify-between mt-9 ">
+        <h1 className="font-bold text-3xl font-mono ">GM - Abdou</h1>
+        <ul className="flex items-center justify-between gap-6 mr-5">
+          <Link href="/">
+            {" "}
+            <li className="font-semibold  text-sm text-black/50 text-white  transition cursor-pointer">
+              Home
+            </li>
+          </Link>
+          <Link href="/blog">
+            {" "}
+            <li className="font-semibold  text-sm text-black/50 text-white  transition cursor-pointer">
+              blog
+            </li>
+          </Link>
+        </ul>
+      </div>
       <div className=" mt-40 flex items-center justify-center">
         <div className="">
-          <h1 className="font-bold text-9xl my-2 font-serif"> FAVORITE</h1>
+          <h1 className="font-bold text-5xl lg:text-9xl my-2 font-serif">
+            {" "}
+            FAVORITE
+          </h1>
         </div>
       </div>
 
@@ -18,14 +46,16 @@ export default function Home() {
           <h1 className=" text-sm   text-white/80">My Project For You</h1>
         </div>
 
-        <div className="  grid grid-cols-3 ">
+        <div className="  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 m-auto gap-3 ">
           {/* start box  */}
           <div className="p-2 rounded my-2  bg-white/10 overflow-hidden">
             <Image
               src={img1}
               alt="Img"
+              placholder="blur"
               className="hover:scale-105  transition-all rounded"
             />
+
             <h1 className="mt-2 font-thintext-sm"> Img Progect </h1>
           </div>
           <div className="p-2 rounded my-2  bg-white/10 overflow-hidden">
@@ -78,14 +108,16 @@ export default function Home() {
 
           <div>
             {" "}
-            <p className=" hover:text-white text-sm   text-white/80">
-              {" "}
-              more Blog{" "}
-            </p>
+            <Link href="/blog">
+              <p className=" hover:text-white text-sm   text-white/80">
+                {" "}
+                more Blog{" "}
+              </p>
+            </Link>
           </div>
         </div>
 
-        <div className="  grid grid-cols-5 gap-5">
+        <div className="  grid sm:grid-cols-2 md:grid-cols-3 m-auto gap-3">
           {/* box  */}
           <div className="py-5 bg-white/10 rounded-lg px-5 ">
             <h4>Next.js 14 Latst UpDtae ... </h4>
@@ -136,7 +168,10 @@ export default function Home() {
 
       <div className=" mt-40 flex items-center justify-center">
         <div className="">
-          <h1 className="font-bold text-9xl my-2 font-serif"> THANKS .. </h1>
+          <h1 className="font-bold text-5xl lg:text-9xl my-2 font-serif">
+            {" "}
+            THANKS ..{" "}
+          </h1>
         </div>
       </div>
     </div>
