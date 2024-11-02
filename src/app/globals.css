@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* styles/globals.css */
+
+@font-face {
+  font-family: "Nebula";
+  src: url("fonts/Nebula-Regular.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Nebula";
+  src: url("/") format("woff");
+  font-weight: bold;
+  font-style: normal;
+} */
+.NebulaFont {
+  font-family: "Nebula";
+}

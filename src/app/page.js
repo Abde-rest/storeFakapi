@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div>
       <div className="flex items-center justify-between mt-9 ">
-        <h1 className="font-bold text-3xl font-mono ">GM - Abdou</h1>
+        <h1 className="font-bold text-3xl font-mono NebulaFont ">Thomes</h1>
         <ul className="flex items-center justify-between gap-6 mr-5">
           <Link href="/">
             {" "}
@@ -31,10 +31,7 @@ export default function Home() {
       </div>
       <div className=" mt-40 flex items-center justify-center">
         <div className="">
-          <h1 className="font-bold text-5xl lg:text-9xl my-2 font-serif">
-            {" "}
-            FAVORITE
-          </h1>
+          <h1 className=" text-5xl lg:text-9xl my-2 NebulaFont"> FAVORITE</h1>
         </div>
       </div>
 
