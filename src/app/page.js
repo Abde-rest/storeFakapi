@@ -26,6 +26,11 @@ const page = () => {
           href={"/About"}>
           About
         </Link>
+        <Link
+          className="text-xs p-2 relative before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-white/80  hover:before:w-full before:transition-all"
+          href={"/blog"}>
+          Blog
+        </Link>
       </header>
 
       {/* start Text Top section 1  */}
