@@ -8,7 +8,7 @@ const nextConfig = {
         hostname: "storage.googleapis.com",
       },
     ],
-    // domains: ["api.escuelajs.co", "i.imgur.com"], // أضف المجالات المطلوبة هنا
+    domains: ["api.escuelajs.co", "i.imgur.com"], // أضف المجالات المطلوبة هنا
   },
   // experimental: {
   //   ppr: "incremental",
