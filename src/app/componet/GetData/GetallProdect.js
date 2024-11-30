@@ -6,18 +6,19 @@ import Link from "next/link";
 const GetallProdect = async () => {
   let data;
   let res = await fetch("https://fakestoreapi.in/api/products?limit=12", {
-    cache: "no-store",
+    next: { revalidate: 10 },
+
+    // No stor
   });
-  // https://fakestoreapi.in/api/products
+
   if (res.ok) {
     data = await res.json();
-    // console.log(dara);
   }
 
   return (
     <div>
       <div className="grid grid-cols-2 sm:grid-cols-4  lg:grid-cols-6 gap-4">
-        {data ? (
+        {data &&
           data.products.map((prodect) => {
             return (
               <Link key={prodect.id} href={`/Prodects/${prodect.id}`}>
@@ -36,11 +37,9 @@ const GetallProdect = async () => {
                 </div>
               </Link>
             );
-          })
-        ) : (
-          <div>Ther Is Problem Plz Relode The Page</div>
-        )}
+          })}
       </div>
+      {data ? null : <div className="text-center">Ther is Problem </div>}
     </div>
   );
 };

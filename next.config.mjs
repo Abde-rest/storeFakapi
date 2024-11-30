@@ -5,10 +5,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "lh3.googleusercontent.com",
+      },
+      {
+        protocol: "https",
         hostname: "storage.googleapis.com",
       },
     ],
-    domains: ["api.escuelajs.co", "i.imgur.com"], // أضف المجالات المطلوبة هنا
+    // أضف المجالات المطلوبة هنا
   },
   // experimental: {
   //   ppr: "incremental",

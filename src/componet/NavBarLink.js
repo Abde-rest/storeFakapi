@@ -1,10 +1,14 @@
 "use client";
+
+import { signIn, signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
 const NavBarLink = () => {
   let pathname = usePathname();
+
+  let session = useSession();
 
   return (
     <div>
@@ -31,6 +35,23 @@ const NavBarLink = () => {
           href={"/blog"}>
           About us
         </Link>
+        {session.status === "unauthenticated" ? (
+          <button
+            className="p-2  bg-black text-white rounded-sm"
+            onClick={() => {
+              signIn();
+            }}>
+            Sign In
+          </button>
+        ) : (
+          <button
+            className="p-2  bg-black text-white rounded-sm"
+            onClick={() => {
+              signOut();
+            }}>
+            Sing Out{" "}
+          </button>
+        )}
       </nav>
     </div>
   );

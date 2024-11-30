@@ -9,7 +9,7 @@ const ProdectSingle = ({ data }) => {
   return (
     <div>
       {data && (
-        <div className="md:grid md:grid-cols-2  m-auto my-12 sm:gap-5">
+        <div className="md:grid md:grid-cols-2  m-auto my-3 sm:gap-5">
           <div className="text-center m-auto bg-black/20">
             {" "}
             <Image

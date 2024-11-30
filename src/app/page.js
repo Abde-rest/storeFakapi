@@ -6,6 +6,7 @@ import LodingImage from "./componet/GetData/LodingImage";
 const page = async () => {
   return (
     <div>
+      {/* <h1 className="bg-black text-white font-bold text-4xl"> {dataUser.name}</h1> */}
       <div>
         <div>
           {" "}
