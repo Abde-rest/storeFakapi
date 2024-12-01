@@ -1,7 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google"; // يمكن استخدام مزودين آخرين
 
-
 export const authOptions = {
   providers: [
     GoogleProvider({
@@ -9,6 +8,8 @@ export const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
+
   // pages: {
   //   signIn: "/auth/signin",
   //   signOut: "/auth/signout",
